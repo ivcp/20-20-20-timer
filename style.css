@@ -1,0 +1,261 @@
+:root {
+  --color-primary: #b8e994;
+  --color-primary-dark: #93dd5c;
+  --color-primary-light: #ddf5cc;
+
+  /*#77d531*/
+
+  --color-grey-light: #444;
+  --color-grey-dark: #272727;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: var(--color-primary-dark);
+  border-bottom: 0.4rem solid var(--color-primary-light);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .name {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: -0.1rem;
+  color: var(--color-grey-light);
+}
+header .btn {
+  display: flex;
+  transition: transform 0.2s;
+}
+
+header .btn:active {
+  transform: rotate(180deg);
+}
+
+.settings {
+  position: absolute;
+  height: 40rem;
+  width: 32rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-grey-light);
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: var(--color-primary-light);
+  border: 2px solid var(--color-grey-light);
+  border-radius: 0.2rem;
+  top: 6.5rem;
+  right: 3.5rem;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.settings h4 {
+  align-self: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.settings__input {
+  width: 6rem;
+  padding: 0.6rem 0.3rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: inherit;
+  border: 1px solid var(--color-grey-light);
+  border-radius: 0.2rem;
+}
+
+.settings__sound-drop {
+  margin-left: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: inherit;
+  width: 9rem;
+  padding: 0.6rem;
+  border: 1px solid var(--color-grey-light);
+  border-radius: 0.2rem;
+}
+
+.settings__btn {
+  align-self: center;
+  border: 0.2rem solid var(--color-grey-light);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: 600;
+  background-color: var(--color-primary-dark);
+  padding: 1rem 2.5rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s;
+}
+
+.settings__btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-grey-dark);
+}
+.settings__btn:active {
+  transform: translateY(1px);
+}
+
+/*** TIMER ***/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  margin-top: 5rem;
+  height: 46rem;
+  width: 46rem;
+  background-color: var(--color-primary);
+  border: 0.5rem solid var(--color-primary-light);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  height: 60rem;
+  width: 60rem;
+  color: var(--color-primary-dark);
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1207;
+  transform: rotate(-90deg);
+  z-index: -1;
+
+  transition: stroke-dashoffset 0.2s ease;
+
+  /* stroke-dashoffset: 1210;
+  stroke-dasharray: 1210; */
+}
+
+.timer__time {
+  font-size: 12rem;
+  color: var(--color-grey-light);
+}
+
+.timer__buttons {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.timer__button {
+  padding: 0 2.5rem;
+  transition: transform 0.2s;
+}
+.timer__button:active {
+  transform: translateY(0.2rem);
+}
+
+.info {
+  font-size: 2rem;
+  line-height: 1.5;
+  width: 60ch;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  color: var(--color-grey-dark);
+  margin-top: 6rem;
+  background-color: var(--color-primary-light);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+.info span {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+/******* BUTTONS *******/
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+
+  background-color: inherit;
+}
+
+.btn-icon {
+  height: 4rem;
+  width: 4rem;
+  color: var(--color-grey-light);
+  transition: color 0.2s;
+}
+.btn:hover .btn-icon {
+  color: var(--color-grey-dark);
+}
+/* 
+.nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item-icon {
+  height: 4rem;
+  width: 4rem;
+  fill: var(--color-grey-dark);
+  color: var(--color-grey-dark);
+}
+
+.nav__item {
+  margin: 1rem 1rem;
+}
+
+.nav__button {
+  border: none;
+  cursor: pointer;
+  padding: 0rem 1rem;
+  background-color: inherit;
+
+  transition: all 0.2s;
+}
+
+.nav__button:hover .nav__item-icon {
+  color: var(--color-grey-light);
+  fill: var(--color-grey-light);
+}
+
+.nav__button:active {
+  transform: translateY(1px);
+} */

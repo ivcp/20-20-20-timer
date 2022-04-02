@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="name">20-20-20 timer</h1>
+      <div class="settings hidden">
+        <h4>Adjust timer</h4>
+        <span
+          >Every <input class="settings__input" type="number" /> minutes,</span
+        >
+        <span
+          >look away for
+          <input class="settings__input" type="number" /> seconds.</span
+        >
+        <div class="settings__sound">
+          <label for="drop">Choose alarm sound:</label>
+          <select class="settings__sound-drop" name="drop" id="">
+            <option value="">Sound 1</option>
+            <option value="">Sound 2</option>
+            <option value="">Sound 3</option>
+          </select>
+        </div>
+        <button class="settings__btn" type="submit">Save</button>
+      </div>
+      <button class="btn">
+        <svg class="btn-icon">
+          <use href="img/settings-outline.svg#set"></use>
+        </svg>
+      </button>
+    </header>
+    <main>
+      <div class="timer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="circle"
+          viewBox="0 0 512 512"
+        >
+          <title>Ellipse</title>
+          <circle
+            cx="256"
+            cy="256"
+            r="192"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="miter"
+            stroke-linejoin="miter"
+            stroke-width="20"
+          />
+        </svg>
+        <div class="timer__time">20:00</div>
+        <div class="timer__buttons">
+          <button class="btn timer__button">
+            <svg class="btn-icon">
+              <use href="img/square-outline.svg#stop"></use>
+            </svg>
+          </button>
+          <button class="btn timer__button">
+            <svg class="btn-icon">
+              <use href="img/play-outline.svg#play"></use>
+            </svg>
+          </button>
+          <button class="btn timer__button hidden">
+            <svg class="btn-icon">
+              <use href="img/pause-outline.svg#pause"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="info">
+        <p>
+          The <span>20-20-20</span> rule: Every <span>20</span> minutes of
+          screen time, look at something that is about <span>20</span> feet (6
+          meters) away for a full <span>20</span> seconds.
+        </p>
+        <p>
+          Regular screen breaks give your eyes some much-needed rest and help
+          prevent eye strain.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
