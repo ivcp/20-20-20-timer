@@ -1,9 +1,15 @@
 :root {
-  --color-primary: #b8e994;
-  --color-primary-dark: #93dd5c;
-  --color-primary-light: #ddf5cc;
+  --color-main: #a5e378;
+  --color-main-dark: #6ecb2a;
+  --color-main-light: #ddf5cc;
 
-  /*#77d531*/
+  --color-work: #a5e378;
+  --color-work-dark: #80d83f;
+  --color-work-light: #ddf5cc;
+
+  --color-pause: #82ccdd;
+  --color-pause-dark: #2e92a9;
+  --color-pause-light: #c5e7ef;
 
   --color-grey-light: #444;
   --color-grey-dark: #272727;
@@ -26,13 +32,13 @@ html {
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-main);
   font-family: 'Inter', sans-serif;
 }
 
 header {
-  background-color: var(--color-primary-dark);
-  border-bottom: 0.4rem solid var(--color-primary-light);
+  background-color: var(--color-main-dark);
+  border-bottom: 0.2rem solid var(--color-main-light);
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -50,6 +56,7 @@ header .name {
 header .btn {
   display: flex;
   transition: transform 0.2s;
+  border: none;
 }
 
 header .btn:active {
@@ -68,7 +75,7 @@ header .btn:active {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: var(--color-primary-light);
+  background-color: var(--color-main-light);
   border: 2px solid var(--color-grey-light);
   border-radius: 0.2rem;
   top: 6.5rem;
@@ -117,14 +124,14 @@ header .btn:active {
   font-size: inherit;
   color: inherit;
   font-weight: 600;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-main-dark);
   padding: 1rem 2.5rem;
   border-radius: 0.2rem;
   transition: all 0.2s;
 }
 
 .settings__btn:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-main);
   color: var(--color-grey-dark);
 }
 .settings__btn:active {
@@ -142,8 +149,8 @@ main {
   margin-top: 5rem;
   height: 46rem;
   width: 46rem;
-  background-color: var(--color-primary);
-  border: 0.5rem solid var(--color-primary-light);
+  background-color: var(--color-main);
+  border: 0.5rem solid var(--color-main-light);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -156,7 +163,7 @@ main {
   position: absolute;
   height: 60rem;
   width: 60rem;
-  color: var(--color-primary-dark);
+  color: var(--color-main-dark);
   stroke-dashoffset: 0;
   stroke-dasharray: 1207;
   transform: rotate(-90deg);
@@ -194,7 +201,8 @@ main {
   border-radius: 0.2rem;
   color: var(--color-grey-dark);
   margin-top: 6rem;
-  background-color: var(--color-primary-light);
+  background-color: var(--color-main-light);
+  border-bottom: 0.4rem solid var(--color-main-dark);
 }
 
 p {
@@ -210,7 +218,6 @@ p {
   border: none;
   cursor: pointer;
   font-size: inherit;
-
   background-color: inherit;
 }
 
@@ -223,39 +230,6 @@ p {
 .btn:hover .btn-icon {
   color: var(--color-grey-dark);
 }
-/* 
-.nav__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-.nav__item-icon {
-  height: 4rem;
-  width: 4rem;
-  fill: var(--color-grey-dark);
+.btn:active .btn-icon {
   color: var(--color-grey-dark);
 }
-
-.nav__item {
-  margin: 1rem 1rem;
-}
-
-.nav__button {
-  border: none;
-  cursor: pointer;
-  padding: 0rem 1rem;
-  background-color: inherit;
-
-  transition: all 0.2s;
-}
-
-.nav__button:hover .nav__item-icon {
-  color: var(--color-grey-light);
-  fill: var(--color-grey-light);
-}
-
-.nav__button:active {
-  transform: translateY(1px);
-} */
