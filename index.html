@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,13 +23,27 @@
       <h1 class="name">20-20-20 timer</h1>
       <div class="settings hidden">
         <h4>Adjust timer</h4>
-        <span
-          >Every <input class="settings__input" type="number" /> minutes,</span
-        >
-        <span
-          >look away for
-          <input class="settings__input" type="number" /> seconds.</span
-        >
+        <p>Every <span id="min-span">20</span> minutes,</p>
+        <input
+          class="settings__input"
+          id="min-input"
+          name="min"
+          type="range"
+          min="1"
+          max="60"
+          value="20"
+        />
+        <p>look away for <span id="sec-span">20</span> seconds.</p>
+        <input
+          class="settings__input"
+          id="sec-input"
+          name="sec"
+          type="range"
+          min="1"
+          max="60"
+          value="20"
+        />
+
         <div class="settings__sound">
           <label for="drop">Choose alarm sound:</label>
           <select class="settings__sound-drop" name="drop" id="">
@@ -34,9 +52,9 @@
             <option value="">Sound 3</option>
           </select>
         </div>
-        <button class="settings__btn" type="submit">Save</button>
+        <button class="settings__btn" id="save">Save</button>
       </div>
-      <button class="btn">
+      <button class="btn" id="settings">
         <svg class="btn-icon">
           <use href="img/settings-outline.svg#set"></use>
         </svg>
@@ -56,24 +74,26 @@
             r="192"
             fill="none"
             stroke="currentColor"
-            stroke-linecap="miter"
+            stroke-linecap="butt"
             stroke-linejoin="miter"
-            stroke-width="20"
+            stroke-width="30"
           />
         </svg>
-        <div class="timer__time">20:00</div>
+        <div class="timer__time">
+          <h1 class="timer__time-left"></h1>
+        </div>
         <div class="timer__buttons">
-          <button class="btn timer__button">
+          <button class="btn timer__button" id="stop">
             <svg class="btn-icon">
-              <use href="img/square-outline.svg#stop"></use>
+              <use href="img/stop-outline.svg#stop"></use>
             </svg>
           </button>
-          <button class="btn timer__button">
+          <button class="btn timer__button" id="play">
             <svg class="btn-icon">
               <use href="img/play-outline.svg#play"></use>
             </svg>
           </button>
-          <button class="btn timer__button hidden">
+          <button class="btn timer__button hidden" id="pause">
             <svg class="btn-icon">
               <use href="img/pause-outline.svg#pause"></use>
             </svg>
