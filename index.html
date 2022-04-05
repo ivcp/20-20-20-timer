@@ -46,13 +46,17 @@
 
         <div class="settings__sound">
           <label for="drop">Choose alarm sound:</label>
-          <select class="settings__sound-drop" name="drop" id="">
-            <option value="">Sound 1</option>
-            <option value="">Sound 2</option>
-            <option value="">Sound 3</option>
+          <select class="settings__sound-drop" name="drop">
+            <option value="sound-1">Sound 1</option>
+            <option value="sound-2">Sound 2</option>
+            <option value="sound-3">Sound 3</option>
+            <option value="sound-4">Sound 4</option>
           </select>
         </div>
-        <button class="settings__btn" id="save">Save</button>
+        <div class="settings__btns">
+          <button class="settings__btn" id="close">Close</button>
+          <button class="settings__btn" id="save">Save</button>
+        </div>
       </div>
       <button class="btn" id="settings">
         <svg class="btn-icon">
@@ -117,4 +121,8 @@
       </div>
     </main>
   </body>
+  <audio id="sound-1" src="sound/the-little-dwarf.mp3"></audio>
+  <audio id="sound-2" src="sound/solemn.mp3"></audio>
+  <audio id="sound-3" src="sound/gentle-alarm.mp3"></audio>
+  <audio id="sound-4" src="sound/et-voila.mp3"></audio>
 </html>

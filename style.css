@@ -1,15 +1,15 @@
 :root {
-  --color-main: #a5e378;
-  --color-main-dark: #6ecb2a;
-  --color-main-light: #d4f2be;
+  --color-main: var(--color-screen);
+  --color-main-dark: var(--color-screen-dark);
+  --color-main-light: var(--color-screen-light);
 
-  --color-screen: #a5e378;
-  --color-screen-dark: #6ecb2a;
-  --color-screen-light: #d4f2be;
+  --color-screen: #3c6382;
+  --color-screen-dark: #274054;
+  --color-screen-light: #dee8f0;
 
-  --color-break: #82ccdd;
-  --color-break-dark: #2e92a9;
-  --color-break-light: #c5e7ef;
+  --color-break: #009432;
+  --color-break-dark: #006121;
+  --color-break-light: #d8ffe5;
 
   --color-grey-light: #444;
   --color-grey-dark: #272727;
@@ -31,13 +31,23 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 22.5em) {
+  html {
+    font-size: 45%;
+  }
+}
+
 body {
   background-color: var(--color-main);
   font-family: 'Inter', sans-serif;
 }
 
 header {
-  /* background-color: var(--color-main-light); */
   border-bottom: 0.4rem solid var(--color-main-dark);
   padding: 2rem;
   display: flex;
@@ -51,7 +61,7 @@ header .name {
   font-weight: 300;
   text-transform: lowercase;
   letter-spacing: -0.1rem;
-  color: var(--color-grey-light);
+  color: var(--color-main-light);
 }
 header .btn {
   display: flex;
@@ -74,7 +84,6 @@ header .btn:active {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
   background-color: var(--color-main-light);
   border: 2px solid var(--color-grey-light);
   border-radius: 0.2rem;
@@ -145,28 +154,42 @@ header .btn:active {
   color: inherit;
   width: 9rem;
   padding: 0.6rem;
-  background-color: var(--color-main);
+  background-color: var(--color-main-light);
   border: 1px solid var(--color-grey-light);
   border-radius: 0.2rem;
 }
 
+.settings__btns {
+  display: flex;
+  justify-content: space-around;
+}
+
 .settings__btn {
   align-self: center;
-  border: 0.2rem solid var(--color-grey-light);
+  border: none;
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
-  color: inherit;
+  text-transform: uppercase;
+  color: var(--color-main-light);
   font-weight: 600;
   background-color: var(--color-main-dark);
   padding: 1rem 2.5rem;
   border-radius: 0.2rem;
-  transition: all 0.2s;
+  transition: background-color 0.2s;
+}
+
+#close {
+  background-color: #eb2f06;
+  transition: background-color 0.2s;
+}
+
+#close:hover {
+  background-color: #eb3006c4;
 }
 
 .settings__btn:hover {
   background-color: var(--color-main);
-  color: var(--color-grey-dark);
 }
 .settings__btn:active {
   transform: translateY(1px);
@@ -193,6 +216,19 @@ main {
   position: relative;
 }
 
+@media (max-width: 37.5em) {
+  .timer {
+    height: 36rem;
+    width: 36rem;
+  }
+}
+@media (max-width: 22.5em) {
+  .timer {
+    height: 31rem;
+    width: 31rem;
+  }
+}
+
 .circle {
   position: absolute;
   height: 60rem;
@@ -205,16 +241,47 @@ main {
   transition: stroke-dashoffset 0.4s ease-out;
 }
 
+@media (max-width: 37.5em) {
+  .circle {
+    height: 47rem;
+    width: 47rem;
+  }
+}
+@media (max-width: 22.5em) {
+  .circle {
+    height: 41rem;
+    width: 41rem;
+  }
+}
+
 .timer__time {
   font-family: 'Inconsolata', monospace;
   font-weight: 100;
   font-size: 7rem;
-  color: var(--color-grey-light);
+  color: var(--color-main-light);
+}
+
+@media (max-width: 37.5em) {
+  .timer__time {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .timer__time {
+    font-size: 4.5rem;
+  }
 }
 
 .timer__buttons {
   margin-top: 3rem;
   display: flex;
+}
+
+@media (max-width: 37.5em) {
+  .timer__buttons {
+    margin-top: 1rem;
+  }
 }
 
 .timer__button {
@@ -237,6 +304,12 @@ main {
   border-bottom: 0.4rem solid var(--color-main-dark);
 }
 
+@media (max-width: 56.25em) {
+  .info {
+    width: 85%;
+  }
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -256,7 +329,7 @@ p {
 .btn-icon {
   height: 4.2rem;
   width: 4.2rem;
-  color: var(--color-grey-dark);
+  color: var(--color-main-light);
   opacity: 0.8;
   transition: opacity 0.1s;
 }
