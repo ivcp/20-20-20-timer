@@ -132,8 +132,10 @@ const handleInput = function () {
 };
 
 const calculateStroke = function (time) {
-  circleElement.style.strokeDashoffset =
-    +circleElement.style.strokeDashoffset + STROKE_DASH_OFFSET / time;
+  const offset =
+    +circleElement.style.strokeDashoffset.replace('px', '') +
+    STROKE_DASH_OFFSET / time;
+  circleElement.style.strokeDashoffset = `${offset}px`;
 };
 
 const changeColors = function (main, dark, light) {

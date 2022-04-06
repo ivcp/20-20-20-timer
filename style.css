@@ -73,6 +73,12 @@ header .btn:active {
   transform: rotate(180deg);
 }
 
+@media (max-width: 56.25em) {
+  header .btn:active {
+    transform: translateY(2px);
+  }
+}
+
 .settings {
   position: absolute;
   height: 45rem;
