@@ -1,7 +1,5 @@
 'use strict';
 
-// media queries
-
 const DEFAULT_TIME = 1200; // 20 min
 const DEFAULT_BREAK_TIME = 20; // 20 sec
 const STROKE_DASH_OFFSET = 1207;
